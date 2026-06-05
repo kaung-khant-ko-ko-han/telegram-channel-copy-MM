@@ -1,10 +1,11 @@
+```markdown
 <h1 align="center">
-    <samp>Telegram Chanal Copy</samp>
+    <samp>တယ်လီဂရမ် ချန်နယ် မိတ္တူကူးယူရေး</samp>
 </h1>
 
 <p align="center">
-    A script to copy all content from a Telegram channel.  <br />
-    It retrieves and saves all messages, including text, images, and links, from a specified Telegram channel for easy backup and access.
+    တယ်လီဂရမ် ချန်နယ်တစ်ခုမှ အကြောင်းအရာအားလုံးကို မိတ္တူကူးယူရန် script တစ်ခု။ <br />
+    သတ်မှတ်ထားသော တယ်လီဂရမ် ချန်နယ်တစ်ခုမှ စာသားများ၊ ရုပ်ပုံများနှင့် လင့်ခ်များ အပါအဝင် မက်ဆေ့ချ်အားလုံးကို ရယူသိမ်းဆည်းပေးပြီး အရန်သိမ်းဆည်းမှုနှင့် ဝင်ရောက်ကြည့်ရှုရာတွင် လွယ်ကူစေသည်။
 </p>
 
 <p align="center">
@@ -13,15 +14,15 @@
 
 ---
 
-## ✨ Features
+## ✨ အင်္ဂါရပ်များ
 
-- 📋 Clone any **Telegram channel or group** (supports both public & private).
-- 🔄 You **must be a member** of the source channel or group to copy its content.
-- 🛠 Automatically handles text, images, PDFs, and videos for efficient backup.
+- 📋 မည်သည့် **တယ်လီဂရမ် ချန်နယ် သို့မဟုတ် အုပ်စု** ကိုမဆို မိတ္တူကူးယူနိုင် (အများပြည်သူနှင့် သီးသန့် နှစ်မျိုးလုံး အလုပ်လုပ်)။
+- 🔄 အကြောင်းအရာများကို မိတ္တူကူးယူရန် သင်သည် **ရင်းမြစ် ချန်နယ် သို့မဟုတ် အုပ်စုတွင် အဖွဲ့ဝင်ဖြစ်ရပါမည်**။
+- 🛠 စာသား၊ ရုပ်ပုံများ၊ PDF နှင့် ဗီဒီယိုများကို အလိုအလျောက် ကိုင်တွယ်ပြီး ထိရောက်စွာ အရန်သိမ်းပေးသည်။
 
 ---
 
-### 📂 Clone this Repository
+### 📂 ဤ repository ကို clone လုပ်ရန်
 
 ```sh
 git clone https://github.com/Warnigo/telegram-chanal-copy.git
@@ -29,56 +30,56 @@ git clone https://github.com/Warnigo/telegram-chanal-copy.git
 cd telegram-chanal-copy
 ```
 
-## 🛠 Configuration
+## 🛠 ပြင်ဆင်သတ်မှတ်ချက်
 
-### 1. Edit [config.py](./config.py) file before use
+### 1. အသုံးမပြုမီ [config.py](./config.py) ဖိုင်ကို တည်းဖြတ်ပါ
 
-- `API_ID` and `API_HASH` - Get those from [my.telegram.org](http://my.telegram.org/)
-- `PHONE_NUMBER` - Give phone number with country code (ex. +998901234567)
-- `NAME` - Give any name what you want
-- `SOURCE_CHAT_ID` and `DESTINATION_CHAT_ID` - Get those from [@username_idbot](https://telegram.dog/username_idbot)
+- `API_ID` နှင့် `API_HASH` - [my.telegram.org](http://my.telegram.org/) မှ ရယူပါ။
+- `PHONE_NUMBER` - နိုင်ငံကုဒ်အပါအဝင် ဖုန်းနံပါတ် ထည့်ပါ (ဥပမာ +998901234567)။
+- `NAME` - မိမိနှစ်သက်ရာ အမည်တစ်ခု ပေးပါ။
+- `SOURCE_CHAT_ID` နှင့် `DESTINATION_CHAT_ID` - [@username_idbot](https://telegram.dog/username_idbot) မှ ရယူပါ။
 
-#### Example `config.py`:
+#### `config.py` နမူနာ:
 
 ```python
 class Config:
-    API_ID = "12345678"            # Your API ID
-    API_HASH = "your_api_hash"     # Your API Hash
-    PHONE_NUMBER = "+998901234567" # Your phone number (with country code)
-    NAME = "telegram-channel"      # Any name you choose
-    SOURCE_CHAT_ID = -1001234567890 # Source channel/group ID
-    DESTINATION_CHAT_ID = -1009876543210 # Destination channel/group ID
+    API_ID = "12345678"            # သင်၏ API ID
+    API_HASH = "your_api_hash"     # သင်၏ API Hash
+    PHONE_NUMBER = "+998901234567" # သင်၏ ဖုန်းနံပါတ် (နိုင်ငံကုဒ်အပါအဝင်)
+    NAME = "telegram-channel"      # သင်ရွေးချယ်သော အမည်
+    SOURCE_CHAT_ID = -1001234567890 # ရင်းမြစ် ချန်နယ်/အုပ်စု ID
+    DESTINATION_CHAT_ID = -1009876543210 # ဦးတည်ရာ ချန်နယ်/အုပ်စု ID
 ```
 
 >[!NOTE]
-> Make sure to replace the placeholders with your actual credentials.
+> နေရာလွတ်များတွင် သင်၏ အထောက်အထားစစ်မှန်သော အချက်အလက်များကို အစားထိုးထည့်သွင်းရန် သေချာပါစေ။
 
-### 2. Create the config.py file
+### 2. config.py ဖိုင် ဖန်တီးပါ
 
-If it doesn't exist, create the configuration file:
+မရှိသေးပါက ပြင်ဆင်သတ်မှတ်မှုဖိုင် ဖန်တီးပါ:
 
 ```bash
 touch config.py
 ```
 
-## 🐍 Virtual Environment Setup
+## 🐍 Virtual Environment ပြင်ဆင်သတ်မှတ်ခြင်း
 
-It's highly recommended to use a virtual environment to avoid dependency conflicts.
+အကြံပြုလိုသည်မှာ dependencies ပဋိပက္ခများကိုရှောင်ရှားရန် virtual environment ကိုသုံးစွဲခြင်းဖြစ်သည်။
 
-### 1. Create a Virtual Environment
+### 1. Virtual Environment တစ်ခု ဖန်တီးပါ
 - #### Windows
 
 ```sh
 python -m venv myenv
 ```
 
-- #### macOS and Linux
+- #### macOS နှင့် Linux
 
 ```sh
 python3 -m venv myenv
 ```
 
-### Activate Virtual Environment
+### Virtual Environment ကို အသက်သွင်းရန်
 
 - #### Windows
 
@@ -86,24 +87,24 @@ python3 -m venv myenv
 .\myenv\Scripts\activate
 ```
 
-- #### macOS and Linux
+- #### macOS နှင့် Linux
 
 ```bash
 source myenv/bin/activate
 ```
 
 > [!NOTE]
-> To deactivate the virtual environment at any time, simply run:
+> Virtual environment ကို မည်သည့်အချိန်တွင်မဆို ပိတ်ရန် အောက်ပါ command ကို ရိုက်ထည့်ပါ:
 
 ```bash
 deactivate
 ```
 
-## 📦 Install Dependencies
+## 📦 Dependencies များ ထည့်သွင်းခြင်း
 
-The script relies on the Telethon library to interact with Telegram.
+ဤ script သည် Telegram နှင့် အလုပ်လုပ်ရန် Telethon library ကို အသုံးပြုသည်။
 
-### Install [telethon](https://pypi.org/project/Telethon/)
+### [telethon](https://pypi.org/project/Telethon/) ကို ထည့်သွင်းရန်
 
 - #### Windows
 
@@ -111,15 +112,15 @@ The script relies on the Telethon library to interact with Telegram.
 pip install telethon
 ```
 
-- #### macOS and Linux
+- #### macOS နှင့် Linux
 
 ```bash
 pip3 install telethon
 ```
 
-## 🚀 Running the Script
+## 🚀 Script ကို run ခြင်း
 
-### To start copying content:
+### အကြောင်းအရာများ စတင်ကူးယူရန်:
 
 - #### Windows
 
@@ -127,27 +128,28 @@ pip3 install telethon
 python bot.py
 ```
 
-- #### macOS and Linux
+- #### macOS နှင့် Linux
 
 ```bash
 python3 bot.py
 ```
 
-## 📋 Usage Instructions
-Upon running the script, you'll be prompted to choose whether to load new messages or resend all messages from the source channel.
+## 📋 အသုံးပြုမှု လမ်းညွှန်ချက်များ
+Script ကို run သည့်အခါ ရင်းမြစ်ချန်နယ်မှ မက်ဆေ့ချ်အသစ်များကိုသာ ကူးယူမလား၊ သို့မဟုတ် မက်ဆေ့ချ်အားလုံးကို ပြန်လည်ပို့မလားဟု မေးမြန်းလိမ့်မည်။
 
-- Enter `y` to only copy new messages from the source channel to the destination.
-- Enter `n` to copy all messages again from the source to the destination.
+- ရင်းမြစ်ချန်နယ်မှ ဦးတည်ရာသို့ မက်ဆေ့ချ်အသစ်များကိုသာ ကူးယူရန် `y` ကို ရိုက်ထည့်ပါ။
+- ရင်းမြစ်မှ ဦးတည်ရာသို့ မက်ဆေ့ချ်အားလုံးကို ပြန်လည်ကူးယူရန် `n` ကို ရိုက်ထည့်ပါ။
 
 >[!NOTE]
-> If you interrupt the script and restart it, you can choose to continue from where you left off or start over.
+> အကယ်၍ သင်သည် script ကို ရပ်တန့်လိုက်ပြီး ပြန်စပါက သင်ရပ်တန့်ခဲ့သည့်နေရာမှ ဆက်လုပ်ရန် သို့မဟုတ် အစမှ ပြန်စရန် ရွေးချယ်နိုင်သည်။
 
-## 🛠 Troubleshooting
-- Make sure you have joined both the source and destination channels/groups before running the script.
-- Double-check your API credentials if you encounter authentication errors.
-If the script stops unexpectedly, you can rerun it. Use the y/n prompt to control what content is copied.
+## 🛠 ပြဿနာဖြေရှင်းခြင်း
+- Script ကို run မလုပ်မီ ရင်းမြစ်နှင့် ဦးတည်ရာ ချန်နယ်/အုပ်စု နှစ်ခုလုံးတွင် သင်အဖွဲ့ဝင်ဖြစ်ကြောင်း သေချာပါစေ။
+- အထောက်အထားစစ်ဆင်ရေးအမှားများတွေ့ပါက သင်၏ API အထောက်အထားများကို ထပ်မံစစ်ဆေးပါ။
+Script မမျှော်လင့်ဘဲ ရပ်သွားပါက ပြန်လည် run နိုင်ပါသည်။ မည်သည့်အကြောင်းအရာကို ကူးယူမည်ကို ထိန်းချုပ်ရန် y/n prompt ကို အသုံးပြုပါ။
 
-## ❤️ Support
-If you find this project useful, please ⭐️ star the repository to show your support!
+## ❤️ အကူအညီ
+ဤပရောဂျက်သည် အသုံးဝင်သည်ဟု သင်ထင်ပါက repository ကို ⭐️ star ပေးခြင်းဖြင့် သင်၏အားပေးမှုကို ပြသပါ။
 
-<p align="center"> <samp>Made with ❤️ by Warnigo</samp> </p> 
+<p align="center"> <samp>Warnigo မှ ❤️ ဖြင့် ပြုလုပ်ထားသည်</samp> </p>
+```
